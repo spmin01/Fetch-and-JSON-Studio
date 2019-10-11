@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
                 }
             });
             container.innerHTML += `
-                <h4>Number of Astronauts: ${json.length+1}</h4>
+                <h4>Number of Astronauts: ${json.length}</h4>
             `;
 
             for (let i = 0; i < json.length; i++) {
