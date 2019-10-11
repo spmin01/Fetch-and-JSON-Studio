@@ -13,6 +13,9 @@ window.addEventListener("load", function() {
                     return 0;
                 }
             });
+            container.innerHTML += `
+                <h4>Number of Astronauts: ${json.length+1}</h4>
+            `;
 
             for (let i = 0; i < json.length; i++) {
                 container.innerHTML += `
@@ -21,7 +24,7 @@ window.addEventListener("load", function() {
                             <h3>${json[i].firstName} ${json[i].lastName}</h3>
                             <ul>
                                 <li>Hours in space: ${json[i].hoursInSpace}</li>
-                                <li style="color: ${json[i].active ? "green" : ""}">Active: ${json[i].active}</li>
+                                <li style="color: ${json[i].active ? "green" : "red"}">Active: ${json[i].active}</li>
                                 <li>Skills: ${json[i].skills.join(", ")}</li>
                             </ul>
                         </div>
